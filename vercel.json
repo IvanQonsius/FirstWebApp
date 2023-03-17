@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "app.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "buildOptions": {"clean": true}
     }
   ],
   "routes": [
@@ -20,9 +21,6 @@
       "dest": "/views/form.ejs"
     }
   ],
-  "static": {
-    "directory": "public"
-  },
   "env": {
     "DATABASE_URL": "/db/database.sqlite",
     "NODE_ENV": "production"
