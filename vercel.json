@@ -1,9 +1,6 @@
 {
   "version": 2,
   "builds": [
-{
-  "version": 2,
-  "builds": [
     { "src": "public/**", "use": "@vercel/static" },
     { "src": "*.js", "use": "@vercel/node" },
     { "src": "*.ejs", "use": "@vercel/node" },
