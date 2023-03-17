@@ -1,10 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    	{ "src": "*.js", "use": "@vercel/node" },
-	{ "src": "data/*.json", "use": "@vercel/node" },
-    	    
-  ],
+ 
   "routes": [
     {
       "src": "/db/(.*)",
