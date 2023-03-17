@@ -15,16 +15,16 @@ app.use(express.static('public'));
 
 // Set up routes
 app.get('/', (req, res) => {
-    res.render('index');
-});
-
-app.get('/table', (req, res) => {
     db.names.findAll().then(names => {
-        res.render('table', { names: names });
+        res.render('index', { names: names });
     }).catch(err => {
         console.log(err);
         res.redirect('/');
     });
+});
+
+app.get('/form', (req, res) => {
+    res.render('form');
 });
 
 app.post('/names', (req, res) => {
@@ -45,6 +45,7 @@ app.post('/names', (req, res) => {
 });
 
 // Use process.env.PORT to listen for incoming requests
-app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server started on port ${process.env.PORT || 3000}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
 });
