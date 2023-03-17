@@ -2,12 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/**",
-      "use": "@now/static"
-    },
-    {
-      "src": "server.js",
-      "use": "@now/node"
+      "src": "app.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -24,6 +20,9 @@
       "dest": "/views/form.ejs"
     }
   ],
+  "static": {
+    "directory": "public"
+  },
   "env": {
     "DATABASE_URL": "/db/database.sqlite",
     "NODE_ENV": "production"
