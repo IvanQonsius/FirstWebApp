@@ -5,9 +5,6 @@
     { "src": "*.js", "use": "@vercel/node" },
     { "src": "*.ejs", "use": "@vercel/node" },
     { "src": "data/*.json", "use": "@vercel/node" }
-  ]
-}
-     
   ],
   "routes": [
     {
@@ -36,4 +33,5 @@
     "NODE_ENV": "production"
   }
 }
+
 
