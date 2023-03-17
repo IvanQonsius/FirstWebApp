@@ -20,6 +20,9 @@
       "dest": "/views/form.ejs"
     }
   ],
+  "build": {
+    "command": "npm install && npm run build"
+  },
   "env": {
     "DATABASE_URL": "/db/database.sqlite",
     "NODE_ENV": "production"
