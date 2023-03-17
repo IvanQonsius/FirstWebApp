@@ -1,8 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.ejs", "use": "@vercel/node" },
-    { "src": "public/**/*", "use": "@vercel/static" }
+      {
+      "src": ".",
+      "use": "@vercel/node"
+	}
 
   ],
   "routes": [
