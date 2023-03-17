@@ -24,15 +24,6 @@
     "DATABASE_URL": "/db/database.sqlite",
     "NODE_ENV": "production"
   },
-  "includeFiles": [
-    "db/**",
-    "models/**",
-    "public/**",
-    "views/**",
-    "app.js",
-    "db.js",
-    "package.json",
-    "package-lock.json"
-  ]
+ 
 }
 
