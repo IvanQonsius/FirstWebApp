@@ -1,15 +1,11 @@
 {
   "version": 2,
- 
   "routes": [
-    
- {
+    {
       "src": "/(.*)",
       "dest": "/index.ejs"
     },
-
-
-{
+    {
       "src": "/db/(.*)",
       "dest": "/db/$1"
     },
@@ -24,8 +20,7 @@
     {
       "src": "/views/(.*)",
       "dest": "/views/$1"
-    },
-   
+    }
   ],
   "env": {
     "DATABASE_URL": "/db/database.sqlite",
