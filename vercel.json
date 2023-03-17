@@ -2,7 +2,14 @@
   "version": 2,
  
   "routes": [
-    {
+    
+ {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+
+
+{
       "src": "/db/(.*)",
       "dest": "/db/$1"
     },
@@ -12,16 +19,13 @@
     },
     {
       "src": "/assets/(.*)",
-      "dest": "/public/$1"
+      "dest": "/static/$1"
     },
     {
       "src": "/views/(.*)",
       "dest": "/views/$1"
     },
-    {
-      "src": "/(.*)",
-      "dest": "/app.js"
-    }
+   
   ],
   "env": {
     "DATABASE_URL": "/db/database.sqlite",
