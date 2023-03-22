@@ -15,12 +15,17 @@
     },
     {
       "src": "/assets/(.*)",
-      "dest": "/static/$1"
+      "dest": "/public/$1"
     },
     {
       "src": "/views/(.*)",
       "dest": "/views/$1"
+    },
+    {
+      "src": "/api",
+      "dest": "api/index.js"
     }
+
   ],
   "env": {
     "DATABASE_URL": "/db/database.sqlite",
