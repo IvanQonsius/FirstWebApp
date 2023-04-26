@@ -27,6 +27,11 @@ app.get('/form', (req, res) => {
     res.render('form');
 });
 
+app.get('/test', (req, res) => {
+    res.render('test');
+});
+
+
 app.post('/names', (req, res) => {
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
