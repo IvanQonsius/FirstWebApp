@@ -15,13 +15,29 @@ app.use(express.static('public'));
 
 // Set up routes
 app.get('/', (req, res) => {
-    db.names.findAll().then(names => {
-        res.render('index', { names: names });
+    const limit = 5;
+    const page = parseInt(req.query.page) || 1;
+    const offset = (page - 1) * limit;
+  
+    db.names.findAndCountAll({
+      limit: limit,
+      offset: offset
+    }).then(result => {
+      const names = result.rows;
+      const count = result.count;
+      const totalPages = Math.ceil(count / limit);
+  
+      res.render('index', {
+        names: names,
+        currentPage: page,
+        totalPages: totalPages
+      });
     }).catch(err => {
-        console.log(err);
-        res.redirect('/');
+      console.log(err);
+      res.redirect('/');
     });
-});
+  });
+  
 
 app.get('/form', (req, res) => {
     res.render('form');
